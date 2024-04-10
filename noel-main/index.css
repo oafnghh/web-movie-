@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bgr-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.bgr-container .box-bgr {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.bgr-container .box-bgr .moon {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 20px;
+    right: 10%;
+}
+
+.bgr-container .box-bgr .moon img {
+    position: absolute;
+    width: 100px;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+    animation: moon 0.5s infinite linear alternate;
+}
+
+.box-snow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.box-snow .snow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.box-snow span {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    animation: snows 5s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+
+@keyframes snows {
+    0% {
+        transform: translateY(-100px) scale(0.2);
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+    }
+}
